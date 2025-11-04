@@ -1,0 +1,27 @@
+FROM nvcr.io/nvidia/tensorflow:25.02-tf2-py3
+
+#RUN rm /etc/apt/sources.list.d/cuda.list
+
+RUN apt-get update && apt-get install -y unzip graphviz curl musescore3 ffmpeg libavcodec-extra
+
+RUN pip install --upgrade pip
+
+WORKDIR /app
+
+COPY ./requirements.txt /app
+RUN pip install -r /app/requirements.txt
+
+# Hack to get around tensorflow-io issue - https://github.com/tensorflow/io/issues/1755
+RUN pip install tensorflow-io
+RUN pip uninstall -y tensorflow-io
+
+#RUN pip install tensorflow-addons
+
+RUN pip install onnxruntime-gpu==1.21.0
+RUN pip install onnx==1.17.0
+RUN pip install opencv-python
+RUN pip install pynvml
+RUN pip install ISR==2.2.0 --no-deps
+RUN pip install grpcio grpcio-tools
+
+ENV PYTHONPATH="${PYTHONPATH}:/app"

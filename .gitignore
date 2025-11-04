@@ -107,3 +107,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+#models
+models
+docker_models_cache
