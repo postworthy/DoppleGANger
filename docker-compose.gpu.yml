@@ -9,7 +9,7 @@ services:
     tty: true
     volumes:
       - ./docker_models_cache/.insightface/:/root/.insightface/ 
-      - ./models/:/models/
+      - ./models/:/app/models/
       - /mnt/overflow/training-data/data:/app/data
       - ./src:/app/src
     deploy:
@@ -25,4 +25,4 @@ services:
     env_file:
      - ./.env
     
-    entrypoint: bash -c "cd /app/notebooks/AEI_NET/AEI_NET/ && python3 train.py"
+    entrypoint: bash -c "cd /app/src/ && python3 gradio_app.py"

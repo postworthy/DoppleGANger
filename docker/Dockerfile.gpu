@@ -25,3 +25,5 @@ RUN pip install ISR==2.2.0 --no-deps
 RUN pip install grpcio grpcio-tools
 
 ENV PYTHONPATH="${PYTHONPATH}:/app"
+
+WORKDIR /app/src

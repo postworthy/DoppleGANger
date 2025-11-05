@@ -110,6 +110,6 @@ venv.bak/
 #models
 models
 docker_models_cache
-
+src/output
 #codex
 AGENTS.md

@@ -18,9 +18,9 @@ python3 train.py \
     --total_epochs=1 \
     --reload_interval=1 \
     --save_epoch=1 \
-    --tfrecord_shard_path="./data/kitchensink_256/" \
-    --model_weights="./models/MODEL_256x256_SUPER_v14_BLOCKS2_latest" \
-    --model_save_path="./models/MODEL_256x256_SUPER_v14" \
+    --tfrecord_shard_path="/app/data/kitchensink_256/" \
+    --model_weights="/app/models/MODEL_256x256_SUPER_v14_BLOCKS2_latest" \
+    --model_save_path="/app/models/MODEL_256x256_SUPER_v15" \
     --g_learning_rate=0.00005 \
     --num_blocks=2 \
     --train_superres \

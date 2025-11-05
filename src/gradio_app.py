@@ -21,11 +21,11 @@ import subprocess
 mixed_precision.set_global_policy('mixed_float16')
 
 IMAGE_SIZE = 256
-#DEFAULT_MODEL = "/models/MODEL_256x256_SUPER_v11_BLOCKS2_latest"
-#DEFAULT_MODEL = "/models/MODEL_256x256_SUPER_v13_BLOCKS2_latest"
-DEFAULT_MODEL = "/models/MODEL_256x256_SUPER_v14_BLOCKS2_latest"
-#DEFAULT_MODEL = "/models/MODEL_ID_ONLY_3_BLOCKS2_latest"
-#DEFAULT_MODEL = "/models/MODEL_256x256_SUPER_ID_ONLY_v1_BLOCKS2_latest"
+#DEFAULT_MODEL = "/app/models/MODEL_256x256_SUPER_v11_BLOCKS2_latest"
+#DEFAULT_MODEL = "/app/models/MODEL_256x256_SUPER_v13_BLOCKS2_latest"
+DEFAULT_MODEL = "/app/models/MODEL_256x256_SUPER_v14_BLOCKS2_latest"
+#DEFAULT_MODEL = "/app/models/MODEL_ID_ONLY_3_BLOCKS2_latest"
+#DEFAULT_MODEL = "/app/models/MODEL_256x256_SUPER_ID_ONLY_v1_BLOCKS2_latest"
 
 UPSAMPLE = False
 WITH_SUPER_RESOLUTION = True
