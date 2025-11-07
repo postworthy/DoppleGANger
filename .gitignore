@@ -111,5 +111,8 @@ venv.bak/
 models
 docker_models_cache
 src/output
+
 #codex
 AGENTS.md
+ai-agent-workspace/
+documentation/
